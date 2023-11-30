@@ -8,3 +8,8 @@ const app = express();
 
 const userInput = require('./db/db.json');
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('public'));
+
+
