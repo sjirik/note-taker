@@ -1,11 +1,8 @@
 [
-  null,
+  4,
   {
-    "title": "Hello",
-    "text": "here is my note\n",
-    "id": {
-      "title": "Test Title",
-      "text": "Test text"
-    }
+    "title": "Hello again",
+    "text": "Here is my next note",
+    "id": null
   }
 ]
