@@ -1,8 +1,18 @@
 [
-  4,
+  6,
   {
     "title": "Hello again",
     "text": "Here is my next note",
     "id": null
+  },
+  {
+    "title": "1",
+    "text": "Here we go",
+    "id": 4
+  },
+  {
+    "title": "2",
+    "text": "Seems to work\n",
+    "id": 5
   }
 ]
