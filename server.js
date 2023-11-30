@@ -28,3 +28,27 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
+function newNote(body, notesEl) {
+    const newUserInput = body;
+    if (!Array.isArray(notesEl))
+        notesEl = [];
+    
+    if (notesEl.length === 0)
+        notesEl.push(0);
+
+    body.id = notesEl[0];
+    notesEl[0]++;
+
+    notesEl.push(newUserInput);
+    fs.writeFileSync(
+        path.join(__dirname, './db/db.json'),
+        JSON.stringify(notesEl, null, 2)
+    );
+    return newUserInput;
+}
+
+app.post('/api/notes', (req, res) => {
+    const newNotes = newNote(req.body, userInput);
+    res.json(newNotes);
+});
+
